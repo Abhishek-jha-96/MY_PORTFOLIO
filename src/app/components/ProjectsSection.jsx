@@ -32,6 +32,15 @@ const projectsData = [
     gitUrl: "https://github.com/Abhishek-jha-96/AI-ML/tree/master",
     previewUrl: "/",
   },
+  {
+    id: 4,
+    title: "Job Posting App",
+    description:"Create a React native application for posting and Searching Jobs with functionality like filters and nearby Jobs recommendations",
+    image: "/images/projects/job_app.png",
+    tag: ["All", "Mobile"],
+    gitUrl: "https://github.com/Abhishek-jha-96/Job_app_react_native",
+    previewUrl: "https://drive.google.com/file/d/1kGiS-9ezJs6qSH23PwDvMWYSADoAT8CD/view?usp=sharing",
+  },
   
 ];
 

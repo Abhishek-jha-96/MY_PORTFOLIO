@@ -87,18 +87,6 @@ const TAB_DATA = [
           href="https://icons8.com/icon/uJM6fQYqDaZK/typescript"
         >
           <Image
-            src="/icons8-express-js-50.png"
-            width={48}
-            height={48}
-            alt="express"
-          ></Image>
-        </a>
-
-        <a
-          target="_blank"
-          href="https://icons8.com/icon/uJM6fQYqDaZK/typescript"
-        >
-          <Image
             src="/icons8-django-48.png"
             width={48}
             height={48}
@@ -192,10 +180,11 @@ const AboutSection = () => {
           <p className="text-base lg:text-lg">
             I am a full stack web developer with a passion for creating
             interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Django, HTML/CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+            working with Python, JavaScript/TypeScript, React, Redux, Node.js,
+            PostgreSQL, Django, Docker(containers), Git and more revelant
+            technology. I am a quick learner and I am always looking to expand
+            my knowledge and skill set. I am a team player and I am excited to
+            work with others to create amazing applications.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton

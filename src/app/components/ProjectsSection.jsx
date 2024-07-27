@@ -41,6 +41,15 @@ const projectsData = [
     gitUrl: "https://github.com/Abhishek-jha-96/Job_app_react_native",
     previewUrl: "https://drive.google.com/file/d/1kGiS-9ezJs6qSH23PwDvMWYSADoAT8CD/view?usp=sharing",
   },
+  {
+    id: 5,
+    title: "Musica: Your Ultimate Music Experience",
+    description:"Musica is a sleek and intuitive music player that brings you the hottest tracks of the week. Discover and enjoy the top hits, and make your voice heard by voting up your favorite songs. Experience the best of current music with Musica!",
+    image: "/images/projects/Musica.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/Abhishek-jha-96/Musica",
+    previewUrl: "#",
+  },
   
 ];
 

@@ -5,6 +5,31 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
+
+const experience_data = [
+  {
+    "position": "Backend Developer Intern",
+    "Company": "CodeMonk",
+    "duration": "April 2024 – Present",
+    "color_style": "rgb(190, 49, 68)",
+    "summary": "Design and development of backend systems and APIs, focusing on optimal code and regular refactoring. Participated in product discussions and meetings, also developing systems for other domains such as Machine Learning."
+  },
+  {
+    "position": "App Development Intern",
+    "Company": "AnchorIT solution",
+    "duration": "july 2023 – September 2023",
+    "color_style": "rgb(129, 12, 168)",
+    "summary": "Assisted in the development of an App that lets user create a custom page to put all their social media and business links."
+  },
+  {
+    "position": "Web Development Intern",
+    "Company": "Ministry of Housing and Urban Affairs",
+    "duration": "April 2023 - June 2023",
+    "color_style": "rgb(190, 49, 68)",
+    "summary": "Developed/Designed a service website for govt Scheme to help the beneficiaries register through the web."
+  }
+]
+
 const Experience = () => {
   return (
     <section>
@@ -13,35 +38,20 @@ const Experience = () => {
       </h2>
 
       <VerticalTimeline>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: "rgb(129, 12, 168)", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-          date="july 2023 – September 2023"
-          iconStyle={{ background: "rgb(129, 12, 168)", color: "#fff" }}
-        >
-          <h3 className="vertical-timeline-element-title">App Development Intern</h3>
-          <h4 className="vertical-timeline-element-subtitle">AnchorIT solution</h4>
-          <p>
-          Assisted in the development of an App that lets user create a custom page to put all their social media and business links
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          contentStyle={{ background: "rgb(190, 49, 68)", color: "#fff"}}
-          className="vertical-timeline-element--education"
-          date="April 2023 - June 2023"
-          iconStyle={{ background: "rgb(190, 49, 68)", color: "#fff" }}
-          icon=''
-        >
-          <h3 className="vertical-timeline-element-title">
-          Web Development Intern
-          </h3>
-          <h4 className="vertical-timeline-element-subtitle">
-          Ministry of Housing and Urban Affairs
-          </h4>
-          <p> Developed/Designed a service website for govt Scheme to help the beneficiaries register through the web.</p>
-        </VerticalTimelineElement>
-        
+      {experience_data.map((experience, index) => (
+          <VerticalTimelineElement
+            key={index}
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: experience.color_style, color: "#fff" }}
+            contentArrowStyle={{ borderRight: `7px solid ${experience.color_style}` }}
+            date={experience.duration}
+            iconStyle={{ background: experience.color_style, color: "#fff" }}
+          >
+            <h3 className="vertical-timeline-element-title">{experience.position}</h3>
+            <h4 className="vertical-timeline-element-subtitle">{experience.Company}</h4>
+            <p>{experience.summary}</p>
+          </VerticalTimelineElement>
+        ))}
       </VerticalTimeline>
     </section>
   );

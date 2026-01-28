@@ -3,17 +3,17 @@
 export const Socials_data = [
   {
     social_login: "https://github.com/Abhishek-jha-96/",
-    path: "/github-icon.svg",
+    path: "/socials/github-icon.svg",
     alt: "Github Icon",
   },
   {
     social_login: "https://www.linkedin.com/in/abhishek-jha-670208204",
-    path: "/linkedin-icon.svg",
+    path: "/socials/linkedin-icon.svg",
     alt: "Linkedin Icon",
   },
   {
     social_login: "https://leetcode.com/abhishekjha96500/",
-    path: "/leetcode.svg",
+    path: "/socials/leetcode-icon.svg",
     alt: "Leetcode Icon",
   },
 ];

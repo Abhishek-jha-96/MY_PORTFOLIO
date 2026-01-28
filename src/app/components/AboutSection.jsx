@@ -10,7 +10,7 @@ const TAB_DATA = [
     content: (
       <div className=" flex gap-2 flex-wrap">
         <Image
-          src="/icons8-python-48.png"
+          src="/skills/python.png"
           width={48}
           height={48}
           alt="python"
@@ -18,7 +18,7 @@ const TAB_DATA = [
 
         <a target="_blank" href="https://icons8.com/icon/40669/c%2B%2B">
           <Image
-            src="/icons8-c-48.png"
+            src="/skills/c++.png"
             width={48}
             height={48}
             alt="C++"
@@ -27,7 +27,7 @@ const TAB_DATA = [
 
         <a target="_blank" href="https://icons8.com/icon/108784/javascript">
           <Image
-            src="/icons8-javascript-48.png"
+            src="/skills/javascript.png"
             width={48}
             height={48}
             alt="C++"
@@ -39,7 +39,7 @@ const TAB_DATA = [
           href="https://icons8.com/icon/uJM6fQYqDaZK/typescript"
         >
           <Image
-            src="/icons8-typescript-96.png"
+            src="/skills/typescript.png"
             width={48}
             height={48}
             alt="C++"
@@ -51,7 +51,7 @@ const TAB_DATA = [
           href="https://icons8.com/icon/uJM6fQYqDaZK/typescript"
         >
           <Image
-            src="/icons8-react-js-80.png"
+            src="/skills/reactjs.png"
             width={48}
             height={48}
             alt="React"
@@ -63,7 +63,7 @@ const TAB_DATA = [
           href="https://icons8.com/icon/uJM6fQYqDaZK/typescript"
         >
           <Image
-            src="/icons8-redux-48.png"
+            src="/skills/redux.png"
             width={48}
             height={48}
             alt="Redux"
@@ -75,7 +75,7 @@ const TAB_DATA = [
           href="https://icons8.com/icon/uJM6fQYqDaZK/typescript"
         >
           <Image
-            src="/icons8-node-js-48.png"
+            src="/skills/nodejs.png"
             width={48}
             height={48}
             alt="NodeJS"
@@ -87,7 +87,7 @@ const TAB_DATA = [
           href="https://icons8.com/icon/uJM6fQYqDaZK/typescript"
         >
           <Image
-            src="/icons8-django-48.png"
+            src="/skills/django.png"
             width={48}
             height={48}
             alt="dJANGO"
@@ -99,7 +99,7 @@ const TAB_DATA = [
           href="https://icons8.com/icon/uJM6fQYqDaZK/typescript"
         >
           <Image
-            src="/icons8-tailwind-css-48.png"
+            src="/skills/tailwind.png"
             width={48}
             height={48}
             alt="tailwind"
@@ -111,7 +111,7 @@ const TAB_DATA = [
           href="https://icons8.com/icon/uJM6fQYqDaZK/typescript"
         >
           <Image
-            src="/icons8-postgresql-48.png"
+            src="/skills/postgresql.png"
             width={48}
             height={48}
             alt="PostgreSQL"
@@ -123,7 +123,7 @@ const TAB_DATA = [
           href="https://icons8.com/icon/uJM6fQYqDaZK/typescript"
         >
           <Image
-            src="/icons8-amazon-web-services-48.png"
+            src="/skills/aws.png"
             width={48}
             height={48}
             alt="AWS"
@@ -148,7 +148,7 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud </li>
+        <li>AWS Cloud</li>
         <li>Machine Learning</li>
         <li>DBMS</li>
       </ul>

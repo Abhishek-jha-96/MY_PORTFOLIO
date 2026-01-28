@@ -33,7 +33,7 @@ const Navbar = () => {
         >
           LOGO
         </Link> */}
-        <Image src='/_93805742-fde0-4607-85e0-93d5fa7c678c-removebg-preview.png' width={60} height={60} alt="logo" />
+        <Image src='/logo.png' width={60} height={60} alt="logo" />
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
             <button

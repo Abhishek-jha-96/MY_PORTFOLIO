@@ -35,7 +35,8 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Full-Stack Engineer building AI-powered systems, from modern web apps to edge devices.
+            Full-Stack Engineer building AI-powered systems, from modern web
+            apps to edge devices.
           </p>
           <div>
             <Link
@@ -44,14 +45,16 @@ const HeroSection = () => {
             >
               Let's Connect
             </Link>
-            <Link
-              href="https://drive.google.com/file/d/1u-Cd4bq1p7VPF-glGXj-_DVjYFXEBxXY/view?usp=sharing"
-              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
+            <a
+              href="https://drive.google.com/file/d/1lPPVz7eHAXv0xsHGk2Fpmx0BzTxEmU9M/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 text-white mt-3"
             >
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                Download CV
+              <span className="block bg-[#121212] rounded-full px-5 py-2 hover:bg-slate-800">
+                View CV
               </span>
-            </Link>
+            </a>
           </div>
         </motion.div>
         <motion.div

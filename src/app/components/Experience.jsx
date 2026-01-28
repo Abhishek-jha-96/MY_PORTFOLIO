@@ -8,26 +8,19 @@ import "react-vertical-timeline-component/style.min.css";
 
 const experience_data = [
   {
+    "position": "Associate Software Engineer",
+    "Company": "CodeMonk",
+    "duration": "October 2024 – Present",
+    "color_style": "rgb(71, 19, 150)",
+    "summary": "Associate Software Engineer working as a Full-Stack Developer, building cloud-native web applications and scalable backend systems. I integrate AI and RAG-based solutions into production workflows, delivering intelligent features end to end. My work spans frontend, backend, and cloud infrastructure, with a growing focus on AI on the Edge and performance-aware systems."
+  },
+  {
     "position": "Backend Developer Intern",
     "Company": "CodeMonk",
-    "duration": "April 2024 – Present",
-    "color_style": "rgb(190, 49, 68)",
+    "duration": "April 2024 – September 2024",
+    "color_style": "rgb(177, 59, 255)",
     "summary": "Design and development of backend systems and APIs, focusing on optimal code and regular refactoring. Participated in product discussions and meetings, also developing systems for other domains such as Machine Learning."
   },
-  {
-    "position": "App Development Intern",
-    "Company": "AnchorIT solution",
-    "duration": "july 2023 – September 2023",
-    "color_style": "rgb(129, 12, 168)",
-    "summary": "Assisted in the development of an App that lets user create a custom page to put all their social media and business links."
-  },
-  {
-    "position": "Web Development Intern",
-    "Company": "Ministry of Housing and Urban Affairs",
-    "duration": "April 2023 - June 2023",
-    "color_style": "rgb(190, 49, 68)",
-    "summary": "Developed/Designed a service website for govt Scheme to help the beneficiaries register through the web."
-  }
 ]
 
 const Experience = () => {

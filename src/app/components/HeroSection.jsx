@@ -43,7 +43,7 @@ const HeroSection = () => {
               href="/#contact"
               className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
             >
-              Let's Connect
+              Let&apos;s Connect
             </Link>
             <a
               href="https://drive.google.com/file/d/1lPPVz7eHAXv0xsHGk2Fpmx0BzTxEmU9M/view?usp=drive_link"
@@ -63,13 +63,13 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div className="hidden md:block rounded-full w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
               src="/images/hero_image.png"
               alt="hero image"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={300}
-              height={300}
+              width={350}
+              height={350}
             />
           </div>
         </motion.div>

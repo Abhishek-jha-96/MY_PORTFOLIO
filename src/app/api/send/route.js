@@ -1,41 +1,48 @@
-// Import necessary modules and configurations
 import { NextResponse } from "next/server";
-import { mailOptions, transporter } from "../../../../config/nodemailer";
 
-export const CONTACT_MESSAGE_FIELDS = {
-  name: 'Name',
-  subject: 'Subject',
-  message: 'Message',
-};
+export async function POST(request) {
+  try {
+    const { email, subject, message } = await request.json();
 
-export const generateEmailContent = (data) => {
-  const stringData = Object.entries(data).reduce((str, [key, val]) => (str += `${CONTACT_MESSAGE_FIELDS[key]}: \n${val} \n \n`), "");
-
-  const htmlData = Object.entries(data).reduce((str, [key, val]) => (str += `<h1>${CONTACT_MESSAGE_FIELDS[key]}</h1><p>${val}</p>`), "");
-
-  return {
-    text: stringData,
-    html: htmlData,
-  };
-};
-
-// Export the handler for the POST method
-export async function POST(req, res) {
-    const { email, subject, message } = await req.json();
-    console.log(email, subject, message);
-  
-    try {
-      // Send email using Nodemailer
-      await transporter.sendMail({
-        ...mailOptions,
-        ...generateEmailContent({ email, subject, message }),
-        subject: subject,
-      });
-  
-      // Respond with success
-      return NextResponse.json({ success: true });
-    } catch (error) {
-      // Respond with error
-      return NextResponse.json({ error: error.message });
+    if (!email || !subject || !message) {
+      return NextResponse.json(
+        { success: false, error: "Missing fields" },
+        { status: 400 }
+      );
     }
+
+    const GOOGLE_SCRIPT_URL = process.env.GOOGLE_SCRIPT_URL;
+
+    if (!GOOGLE_SCRIPT_URL) {
+      console.error("Missing GOOGLE_SCRIPT_URL env variable");
+      return NextResponse.json(
+        { success: false },
+        { status: 500 }
+      );
+    }
+
+    const res = await fetch(GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, subject, message }),
+    });
+
+    if (!res.ok) {
+      console.error("Google Script failed");
+      return NextResponse.json(
+        { success: false },
+        { status: 502 }
+      );
+    }
+
+    return NextResponse.json({ success: true });
+  } catch (err) {
+    console.error(err);
+    return NextResponse.json(
+      { success: false },
+      { status: 500 }
+    );
   }
+}

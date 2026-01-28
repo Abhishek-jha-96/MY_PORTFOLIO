@@ -178,7 +178,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I’m a Full-Stack Software Engineer building scalable, high-performance web systems using 
+            I&apos;m a Full-Stack Software Engineer building scalable, high-performance web systems using 
             TypeScript, Python, and Rust/C++, with AI-driven features across the stack. My work spans 
             modern frontends, backend APIs, and data pipelines, with a growing focus on AI on the Edge, 
             systems programming, and performance-critical workloads.

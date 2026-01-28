@@ -35,15 +35,14 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            FULL STACK Web-developer, looking for opportunities in Web or
-            Software-Dev Roles.
+            Full-Stack Engineer building AI-powered systems, from modern web apps to edge devices.
           </p>
           <div>
             <Link
-              href="/contact"
+              href="/#contact"
               className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
             >
-              Hire Me
+              Let's Connect
             </Link>
             <Link
               href="https://drive.google.com/file/d/1u-Cd4bq1p7VPF-glGXj-_DVjYFXEBxXY/view?usp=sharing"

@@ -1,6 +1,6 @@
 "use client";
-import Link from "next/link";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
@@ -33,7 +33,7 @@ const Navbar = () => {
         >
           LOGO
         </Link> */}
-        <Image src='/logo.png' width={60} height={60} alt="logo" />
+        <Image src="/logo.png" width={60} height={60} alt="logo" />
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
             <button
@@ -62,6 +62,18 @@ const Navbar = () => {
         </div>
       </div>
       {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+      <motion.div
+        className="absolute bottom-0 left-0 h-[2px] w-1/4
+             bg-gradient-to-r from-transparent via-purple-400 to-transparent
+             blur-[1.5px]"
+        initial={{ x: "-130%" }}
+        animate={{ x: "360%" }}
+        transition={{
+          repeat: Infinity,
+          duration: 4,
+          ease: "linear",
+        }}
+      />
     </nav>
   );
 };

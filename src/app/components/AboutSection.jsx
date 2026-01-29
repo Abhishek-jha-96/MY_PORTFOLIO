@@ -2,133 +2,96 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import AWSIcon from "./icons/aws";
+import AzureIcon from "./icons/azure";
+import GitIcon from "./icons/git";
+import GithubIcon from "./icons/github";
+import DockerIcon from "./icons/docker";
+import PostgreqlIcon from "./icons/postgreql";
+import MongoIcon from "./icons/mongodb";
+import DjangoIcon from "./icons/django";
+import NestJsIcon from "./icons/nestJs";
+import NodeJsIcon from "./icons/nodeJs";
+import FastapiIcon from "./icons/fastapi";
+import ReactjsIcon from "./icons/reactjs";
+import ReduxIcon from "./icons/redux";
+import TailwindcssIcon from "./icons/tailwindcss";
+import PythonIcon from "./icons/pythonIcon";
+import JavaScriptIcon from "./icons/javaScript";
+import TypeScriptIcon from "./icons/typeScript";
+import CPPIcon from "./icons/c++";
 
 const TAB_DATA = [
   {
     title: "Skills",
     id: "skills",
     content: (
-      <div className=" flex gap-2 flex-wrap">
-        <Image
-          src="/skills/python.png"
-          width={48}
-          height={48}
-          alt="python"
-        ></Image>
+      <div className="flex flex-col gap-6">
+        {/* Programming Languages */}
+        <div>
+          <h3 className="text-lg font-semibold text-gray-300 mb-2">
+            Programming Languages
+          </h3>
+          <div className="flex flex-wrap gap-3">
+            <PythonIcon />
+            <JavaScriptIcon />
+            <TypeScriptIcon />
+            <CPPIcon />
+          </div>
+        </div>
 
-        <a target="_blank" href="https://icons8.com/icon/40669/c%2B%2B">
-          <Image
-            src="/skills/c++.png"
-            width={48}
-            height={48}
-            alt="C++"
-          ></Image>
-        </a>
+        {/* Frontend */}
+        <div>
+          <h3 className="text-lg font-semibold text-gray-300 mb-2">Frontend</h3>
+          <div className="flex flex-wrap gap-3">
+            <ReactjsIcon />
+            <ReduxIcon />
+            <TailwindcssIcon />
+          </div>
+        </div>
 
-        <a target="_blank" href="https://icons8.com/icon/108784/javascript">
-          <Image
-            src="/skills/javascript.png"
-            width={48}
-            height={48}
-            alt="C++"
-          ></Image>
-        </a>
+        {/* Backend */}
+        <div>
+          <h3 className="text-lg font-semibold text-gray-300 mb-2">Backend</h3>
+          <div className="flex flex-wrap gap-3">
+            <DjangoIcon />
+            <FastapiIcon />
+            <NestJsIcon />
+            <NodeJsIcon />
+          </div>
+        </div>
 
-        <a
-          target="_blank"
-          href="https://icons8.com/icon/uJM6fQYqDaZK/typescript"
-        >
-          <Image
-            src="/skills/typescript.png"
-            width={48}
-            height={48}
-            alt="C++"
-          ></Image>
-        </a>
+        {/* Databases */}
+        <div>
+          <h3 className="text-lg font-semibold text-gray-300 mb-2">
+            Databases
+          </h3>
+          <div className="flex flex-wrap gap-3">
+            <PostgreqlIcon />
+            <MongoIcon />
+          </div>
+        </div>
 
-        <a
-          target="_blank"
-          href="https://icons8.com/icon/uJM6fQYqDaZK/typescript"
-        >
-          <Image
-            src="/skills/reactjs.png"
-            width={48}
-            height={48}
-            alt="React"
-          ></Image>
-        </a>
+        {/* DevOps & CI/CD */}
+        <div>
+          <h3 className="text-lg font-semibold text-gray-300 mb-2">
+            DevOps & CI/CD
+          </h3>
+          <div className="flex flex-wrap gap-3">
+            <DockerIcon />
+            <GitIcon />
+            <GithubIcon />
+          </div>
+        </div>
 
-        <a
-          target="_blank"
-          href="https://icons8.com/icon/uJM6fQYqDaZK/typescript"
-        >
-          <Image
-            src="/skills/redux.png"
-            width={48}
-            height={48}
-            alt="Redux"
-          ></Image>
-        </a>
-
-        <a
-          target="_blank"
-          href="https://icons8.com/icon/uJM6fQYqDaZK/typescript"
-        >
-          <Image
-            src="/skills/nodejs.png"
-            width={48}
-            height={48}
-            alt="NodeJS"
-          ></Image>
-        </a>
-
-        <a
-          target="_blank"
-          href="https://icons8.com/icon/uJM6fQYqDaZK/typescript"
-        >
-          <Image
-            src="/skills/django.png"
-            width={48}
-            height={48}
-            alt="dJANGO"
-          ></Image>
-        </a>
-
-        <a
-          target="_blank"
-          href="https://icons8.com/icon/uJM6fQYqDaZK/typescript"
-        >
-          <Image
-            src="/skills/tailwind.png"
-            width={48}
-            height={48}
-            alt="tailwind"
-          ></Image>
-        </a>
-
-        <a
-          target="_blank"
-          href="https://icons8.com/icon/uJM6fQYqDaZK/typescript"
-        >
-          <Image
-            src="/skills/postgresql.png"
-            width={48}
-            height={48}
-            alt="PostgreSQL"
-          ></Image>
-        </a>
-
-        <a
-          target="_blank"
-          href="https://icons8.com/icon/uJM6fQYqDaZK/typescript"
-        >
-          <Image
-            src="/skills/aws.png"
-            width={48}
-            height={48}
-            alt="AWS"
-          ></Image>
-        </a>
+        {/* Cloud */}
+        <div>
+          <h3 className="text-lg font-semibold text-gray-300 mb-2">Cloud</h3>
+          <div className="flex flex-wrap gap-3">
+            <AWSIcon />
+            <AzureIcon />
+          </div>
+        </div>
       </div>
     ),
   },
@@ -136,22 +99,59 @@ const TAB_DATA = [
     title: "Education",
     id: "education",
     content: (
-      <ul className="list-disc pl-2">
-        <li>
-          Bachelor’s of Technology in Electronics and Communication (MAIT)
-        </li>
-      </ul>
+      <div className="space-y-4">
+        <div>
+          <div className="flex justify-between items-center">
+            <h3 className="text-sm font-semibold text-white">
+              Bachelor of Technology (Electronics & Communication)
+            </h3>
+            <span className="text-sm text-gray-400">2020 – 2024</span>
+          </div>
+          <p className="text-sm text-gray-300 mt-1">
+            Maharaja Agrasen Institute of Technology (MAIT)
+          </p>
+        </div>
+      </div>
     ),
   },
   {
     title: "Course-Work",
     id: "certifications",
     content: (
-      <ul className="list-disc pl-2">
-        <li>AWS Cloud</li>
-        <li>Machine Learning</li>
-        <li>DBMS</li>
-      </ul>
+      <div className="space-y-4">
+        {/* Cloud Computing */}
+        <div>
+          <h3 className="text-sm font-semibold text-white">
+            Cloud Computing (AWS & Azure)
+          </h3>
+          <p className="text-xs text-gray-400 mt-1 leading-relaxed">
+            Core cloud concepts, IAM, compute, storage, networking, and
+            deploying scalable services on AWS and Azure.
+          </p>
+        </div>
+
+        {/* GenAI & LLMs */}
+        <div>
+          <h3 className="text-sm font-semibold text-white">
+            Generative AI & Large Language Models
+          </h3>
+          <p className="text-xs text-gray-400 mt-1 leading-relaxed">
+            Fundamentals of LLMs, embeddings, prompt engineering, vector
+            databases, and building AI-powered applications.
+          </p>
+        </div>
+
+        {/* Full-Stack Development */}
+        <div>
+          <h3 className="text-sm font-semibold text-white">
+            Full-Stack Web Development
+          </h3>
+          <p className="text-xs text-gray-400 mt-1 leading-relaxed">
+            End-to-end web development using modern frontend frameworks, backend
+            APIs, databases, and authentication flows.
+          </p>
+        </div>
+      </div>
     ),
   },
 ];
@@ -178,10 +178,12 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I&apos;m a Full-Stack Software Engineer building scalable, high-performance web systems using 
-            TypeScript, Python, and Rust/C++, with AI-driven features across the stack. My work spans 
-            modern frontends, backend APIs, and data pipelines, with a growing focus on AI on the Edge, 
-            systems programming, and performance-critical workloads.
+            I&apos;m a Full-Stack Software Engineer building scalable,
+            high-performance web systems using TypeScript, Python, and Rust/C++,
+            with AI-driven features across the stack. My work spans modern
+            frontends, backend APIs, and data pipelines, with a growing focus on
+            AI on the Edge, systems programming, and performance-critical
+            workloads.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
